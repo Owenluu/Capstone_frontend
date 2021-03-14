@@ -1,8 +1,8 @@
 <template>
   <div>
     <h2>{{ listing.title }}</h2>
-    <p>{{ product.price }}</p>
-    <p>{{ product.description }}</p>
+    <p>{{ listing.price }}</p>
+    <p>{{ listing.description }}</p>
     <a v-bind:href="`/listings/${listing.id}/edit`">Edit This Listing</a>
     <br />
     <a href="/listings">Back to All Listings</a>
@@ -14,7 +14,11 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      listings: {},
+      listing: {},
+      title: "",
+      price: "",
+      description: "",
+      image: "",
     };
   },
   created: function() {

@@ -6,6 +6,10 @@ import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
 import ListingIndex from "../views/ListingIndex.vue";
 import ListingShow from "../views/ListingShow.vue";
+import ListingCreate from "../views/ListingCreate.vue";
+import ListingEdit from "../views/ListingUpdate.vue";
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 Vue.use(VueRouter);
 
@@ -26,8 +30,10 @@ const routes = [
   { path: "/signup", name: "signup", component: Signup },
   { path: "/login", name: "login", component: Login },
   { path: "/logout", name: "logout", component: Logout },
-  { path: "/listingindex", name: "ListingIndex", component: ListingIndex },
-  { path: "/listingshow", name: "ListingShow", component: ListingShow },
+  { path: "/listings", name: "ListingIndex", component: ListingIndex },
+  { path: "/listings/new", name: "listing-create", component: ListingCreate },
+  { path: "/listings/:id", name: "ListingShow", component: ListingShow },
+  { path: "/listings/:id/edit", name: "listing-edit", component: ListingEdit },
 ];
 
 const router = new VueRouter({

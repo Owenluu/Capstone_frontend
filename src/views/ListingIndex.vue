@@ -60,13 +60,8 @@
                 <span class="pink"></span>
                 <div class="product-action-2">
                   <!-- <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a> -->
-                  <a
-                    title="Quick View"
-                    v-bind:href="`/listings/${listing.id}`"
-                    data-toggle="modal"
-                    data-target="wishlist.html"
-                  >
-                    <i class="fa fa-eye"></i>
+                  <a title="Quick View" data-toggle="modal" data-target="wishlist.html">
+                    <i class="fa fa-eye" v-bind:href="`/listings/${listing.id}`"></i>
                   </a>
                   <!-- <a title="Compare" href="#"><i class="fa fa-retweet"></i></a> -->
                 </div>

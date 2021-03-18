@@ -8,6 +8,7 @@ import ListingIndex from "../views/ListingIndex.vue";
 import ListingShow from "../views/ListingShow.vue";
 import ListingCreate from "../views/ListingCreate.vue";
 import ListingEdit from "../views/ListingUpdate.vue";
+
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 

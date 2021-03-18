@@ -7,7 +7,7 @@
             <div class="login-register-wrapper">
               <div class="login-register-tab-list nav">
                 <a class="active" data-toggle="tab" href="#lg1">
-                  <h4>Register</h4>
+                  <h4>Signup</h4>
                 </a>
                 <!-- <a data-toggle="tab" href="#lg2">
                   <h4>register</h4>

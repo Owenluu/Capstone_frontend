@@ -1,6 +1,5 @@
 <template>
   <div class="Listing-Create">
-    <img v-if="status" v-bind:src="`https://http.cat/${status}`" v-on:click="status = ``" alt="" />
     <form v-on:submit.prevent="createListing()">
       <h1>Add New Listing</h1>
       <ul>
@@ -17,14 +16,34 @@
         <textarea Class="form-control" v-model="description"></textarea>
       </div>
       <div class="form-group">
+        <label>User ID:</label>
+        <br />
+        <input type="text" class="form-control" v-model="userId" />
+      </div>
+      <div class="form-group">
         <label>Price:</label>
         <br />
         <input type="text" class="form-control" v-model="price" />
       </div>
       <div class="form-group">
-        <label>Images:</label>
+        <label>Quantity:</label>
         <br />
-        <input type="text" class="form-control" v-model="images" />
+        <input type="text" class="form-control" v-model="quantity" />
+      </div>
+      <div class="form-group">
+        <label>Location ID:</label>
+        <br />
+        <input type="text" class="form-control" v-model="locationId" />
+      </div>
+      <div class="form-group">
+        <label>Shoe Brand ID:</label>
+        <br />
+        <input type="text" class="form-control" v-model="shoeBrandId" />
+      </div>
+      <div class="form-group">
+        <label>Image:</label>
+        <br />
+        <input type="text" class="form-control" v-model="imageUrl" />
       </div>
       <input type="submit" class="btn btn-primary" value="Submit" />
     </form>
@@ -36,32 +55,47 @@ import axios from "axios";
 export default {
   data: function() {
     return {
+      listings: [],
       title: "",
       description: "",
+      userId: "",
       price: "",
-      images: "",
-      status: "",
+      quantity: "",
+      locationId: "",
+      shoeBrandId: "",
+      imageUrl: "",
       errors: [],
     };
   },
+  created: function() {
+    this.indexListings();
+  },
   methods: {
+    indexListings: function() {
+      axios.get("/api/listings").then(response => {
+        this.listings = response.data;
+        console.log("All listings:", this.listings);
+      });
+    },
     createListing: function() {
+      console.log("createListing");
       var params = {
         title: this.title,
         description: this.description,
+        user_id: this.userId,
         price: this.price,
-        images: this.images,
+        quantity: this.quantity,
+        location_id: this.locationId,
+        shoe_brand_id: this.shoeBrandId,
+        image_url: this.imageUrl,
       };
       axios
-        .listing("/api/listings", params)
+        .post("/api/listings", params)
         .then(response => {
-          console.log(response);
+          console.log("Success", response.data);
           this.$router.push("/listings");
         })
-        .catch(error => {
-          this.errors = error.response.data.errors;
-          this.status = error.response.status;
-        });
+        .catch(error => console.log(error.response));
     },
   },
 };

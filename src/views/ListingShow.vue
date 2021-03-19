@@ -5,7 +5,7 @@
         <div class="breadcrumb-content text-center">
           <ul>
             <li>
-              <a href="/listings">Back To All Listings</a>
+              <a href="/listings">Shop All</a>
             </li>
           </ul>
         </div>
@@ -18,40 +18,61 @@
             <div class="product-details">
               <div class="product-details-img">
                 <div class="tab-content jump">
-                  <div id="shop-details-1" class="tab-pane large-img-style">
+                  <!-- <div id="shop-details-1" class="tab-pane large-img-style">
                     <img :src="listing.images[0].image_url" alt="" />
                     <div class="img-popup-wrap">
-                      <a class="img-popup" href="/assets/img/product-details/b-large-1.jpg">
+                      <a class="img-popup" :href="listing.images[0].image_url">
                         <i class="pe-7s-expand1"></i>
                       </a>
                     </div>
                   </div>
                   <div id="shop-details-2" class="tab-pane active large-img-style">
-                    <img src="/assets/img/product-details/large-2.jpg" alt="" />
+                    <img :src="listing.images[0].image_url" alt="" />
                     <div class="img-popup-wrap">
-                      <a class="img-popup" href="/assets/img/product-details/b-large-2.jpg">
+                      <a class="img-popup" :href="listing.images[0].image_url">
                         <i class="pe-7s-expand1"></i>
                       </a>
                     </div>
                   </div>
                   <div id="shop-details-3" class="tab-pane large-img-style">
-                    <img src="/assets/img/product-details/large-3.jpg" alt="" />
+                    <img :src="listing.images[0].image_url" alt="" />
                     <div class="img-popup-wrap">
-                      <a class="img-popup" href="/assets/img/product-details/b-large-3.jpg">
+                      <a class="img-popup" :href="listing.images[0].image_url">
                         <i class="pe-7s-expand1"></i>
                       </a>
                     </div>
+                  </div> -->
+                </div>
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="d-block w-100" :src="listing.images[0].image_url" alt="First slide" />
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" :src="listing.images[0].image_url" alt="Second slide" />
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" :src="listing.images[0].image_url" alt="Third slide" />
+                    </div>
                   </div>
+                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
                 </div>
                 <div class="shop-details-tab nav">
                   <a class="shop-details-overly" href="#shop-details-1" data-toggle="tab">
-                    <img src="/assets/img/product-details/small-1.jpg" alt="" />
+                    <!-- <img :src="listing.images[0].image_url" alt="" /> -->
                   </a>
                   <a class="shop-details-overly active" href="#shop-details-2" data-toggle="tab">
-                    <img src="/assets/img/product-details/small-2.jpg" alt="" />
+                    <!-- <img :rc="listing.images[0].image_url" alt="" /> -->
                   </a>
                   <a class="shop-details-overly" href="#shop-details-3" data-toggle="tab">
-                    <img src="/assets/img/product-details/small-3.jpg" alt="" />
+                    <!-- <img :src="listing.images[0].image_url" alt="" /> -->
                   </a>
                 </div>
               </div>
@@ -65,10 +86,9 @@
               </div>
               <p>{{ listing.description }}</p>
               <div class="col-lg-8 col-md-7">
-                <div class="contact-form">
-                  <div class="contact-title mb-30">
-                    <h2>Get In Touch</h2>
-                  </div>
+                <!-- <div class="contact-form"> -->
+                <!-- <div class="contact-title mb-30"></div> -->
+                <!-- <h2>Get In Touch</h2>
                   <form
                     class="contact-form-style"
                     id="contact-form"
@@ -90,9 +110,9 @@
                         <button class="submit" type="submit">SEND</button>
                       </div>
                     </div>
-                  </form>
-                  <p class="form-messege"></p>
-                </div>
+                  </form> -->
+                <!-- <p class="form-messege"></p> -->
+                <!-- </div> -->
               </div>
             </div>
           </div>
@@ -117,12 +137,12 @@
       </div>
     </div>
 
-    <h2>{{ listing.title }}</h2>
+    <!-- <h2>{{ listing.title }}</h2>
     <p>{{ listing.description }}</p>
     <p>{{ listing.price }}</p>
     <div v-for="image in listing.images" v-bind:key="image.id">
       <img :src="image.image_url" alt="image of a sneaker" />
-    </div>
+    </div> -->
 
     <!-- <a v-bind:href="`/listings/${listing.id}/edit`">Edit This Listing</a> -->
     <br />

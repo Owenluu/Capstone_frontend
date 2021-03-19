@@ -45,9 +45,9 @@
                 <div class="same-style header-search">
                   <a class="search-active" href="#"><i class="pe-7s-search"></i></a>
                   <div class="search-content">
-                    <form action="#">
-                      <input type="text" placeholder="Search" />
-                      <button class="button-search"><i class="pe-7s-search"></i></button>
+                    <form v-on:submit.prevent="submit" action="#">
+                      <input type="text" v-model="search" placeholder="Search" />
+                      <button class="button-search" type="submit"><i class="pe-7s-search"></i></button>
                     </form>
                   </div>
                 </div>
@@ -166,6 +166,11 @@ export default {
   },
 
   methods: {
+    submit: function() {
+      console.log(this.search);
+      this.search = "";
+      this.$router.push("/listings?search=");
+    },
     isLoggedIn: function() {
       return localStorage.getItem("jwt");
     },

@@ -55,7 +55,7 @@
         </div>
       </div>
     </div>
-    <form v-on:submit.prevent="submit()">
+    <!-- <form v-on:submit.prevent="submit()">
       <h1>Login</h1>
       <ul>
         <li class="text-danger" v-for="error in errors" v-bind:key="error">
@@ -71,7 +71,7 @@
         <input type="password" class="form-control" v-model="password" />
       </div>
       <input type="submit" class="btn btn-primary" value="Submit" />
-    </form>
+    </form> -->
   </div>
 </template>
 

@@ -45,9 +45,8 @@
     Search:
     <input v-model="search" type="text" list="listing-title" />
     <datalist class="listing-title-search">
-      <option v-for="listing in listings" :key="listing.id">{{ listing.title }} {{ listing.description }}/></option>
+      <!-- <option v-for="listing in listings" :key="listing.id">{{ listing.title }} {{ listing.description }}/></option> -->
     </datalist>
-    <h1></h1>
     <div class="product-area pb-60 section-padding-1">
       <div class="container-fluid">
         <div class="section-title-2 text-center mb-60">
@@ -60,7 +59,7 @@
               <div class="product-img">
                 <a v-bind:href="`/listings/${listing.id}`">
                   <img class="default-img" v-bind:src="listing.images[0].image_url" alt="" />
-                  <img class="hover-img" v-bind:src="listing.images[0].image_url" alt="" />
+                  <img class="hover-img" v-bind:src="listing.images[1].image_url" alt="" />
                 </a>
                 <!-- <span class="black">${{ listing.price }}</span> -->
                 <div class="product-action-2">

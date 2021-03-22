@@ -30,12 +30,15 @@
                       </a>
                       <ul class="submenu">
                         <li><a href="/about">about us</a></li>
-                        <li><a href="my-account.html">my account</a></li>
+                        <!-- <li><a href="my-account.html">my account</a></li> -->
+                        <li><a href="blog-details.html">blog</a></li>
+
                         <li><a href="/login">login</a></li>
                         <li><a href="/signup">Signup</a></li>
                       </ul>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/map">Map</a></li>
                   </ul>
                 </nav>
               </div>
@@ -47,6 +50,10 @@
                   <div class="search-content">
                     <form v-on:submit.prevent="submit" action="#">
                       <input type="text" v-model="search" placeholder="Search" />
+                      <option v-for="listing in filterBy(listings, search, 'title')" v-bind:key="listing.id">
+                        <a v-bind:href="`/listings/${listing.id}`">{{ listing.title }} {{ listing.description }}/></a>
+                      </option>
+
                       <button class="button-search" type="submit"><i class="pe-7s-search"></i></button>
                     </form>
                   </div>
@@ -56,8 +63,8 @@
                   <div class="account-dropdown">
                     <ul>
                       <li><a href="/login">Login</a></li>
-                      <li><a href="/signup">Register</a></li>
-                      <li><a href="my-account.html">my account</a></li>
+                      <li><a href="/signup">Signup</a></li>
+                      <!-- <li><a href="my-account.html">my account</a></li> -->
                     </ul>
                   </div>
                 </div>
@@ -90,6 +97,7 @@
                     <ul>
                       <li><a href="/about">about us</a></li>
                       <li><a href="my-account.html">my account</a></li>
+                      <li><a href="blog-details.html">blog</a></li>
                       <li><a href="/login">login</a></li>
                       <li><a href="/signup">Signup</a></li>
                     </ul>
@@ -102,7 +110,6 @@
         </div>
       </div>
     </header>
-
     <router-view />
 
     <footer class="footer-area bg-gray pt-100 pb-70">
@@ -154,15 +161,23 @@
 
 <script>
 /* global setupTheme */
-
+import Vue2Filters from "vue2-filters";
 export default {
+  mixins: [Vue2Filters.mixin],
   data: function() {
     return {
       flashMessage: "",
+      listing: [],
+      search: "",
     };
   },
   mounted: function() {
     setupTheme();
+  },
+
+  created: function() {
+    this.search = this.$route.query.search;
+    // this.indexListings();
   },
 
   methods: {

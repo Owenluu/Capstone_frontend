@@ -8,6 +8,8 @@ import ListingIndex from "../views/ListingIndex.vue";
 import ListingShow from "../views/ListingShow.vue";
 import ListingCreate from "../views/ListingCreate.vue";
 import ListingEdit from "../views/ListingUpdate.vue";
+import Map from "../views/Map.vue";
+import UserRating from "../views/UserRating.vue";
 
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -35,6 +37,8 @@ const routes = [
   { path: "/listings/new", name: "listing-create", component: ListingCreate },
   { path: "/listings/:id", name: "ListingShow", component: ListingShow },
   { path: "/listings/:id/edit", name: "listing-edit", component: ListingEdit },
+  { path: "/map", name: "map", component: Map },
+  { path: "/users/:id", name: "RatingsShow", component: UserRating },
 ];
 
 const router = new VueRouter({

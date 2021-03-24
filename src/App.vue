@@ -23,6 +23,7 @@
                     <li>
                       <a href="/listings/new">Sell</a>
                     </li>
+                    <li><a href="/map">Map</a></li>
                     <li>
                       <a href="#">
                         Pages
@@ -31,14 +32,14 @@
                       <ul class="submenu">
                         <li><a href="/about">about us</a></li>
                         <!-- <li><a href="my-account.html">my account</a></li> -->
-                        <li><a href="blog-details.html">blog</a></li>
+                        <!-- <li><a href="blog-details.html">blog</a></li> -->
 
                         <li><a href="/login">login</a></li>
                         <li><a href="/signup">Signup</a></li>
+                        <li><a href="/logout">logout</a></li>
                       </ul>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="/map">Map</a></li>
+                    <!-- <li><a href="contact.html">Contact</a></li> -->
                   </ul>
                 </nav>
               </div>
@@ -50,9 +51,9 @@
                   <div class="search-content">
                     <form v-on:submit.prevent="submit" action="#">
                       <input type="text" v-model="search" placeholder="Search" />
-                      <option v-for="listing in filterBy(listings, search, 'title')" v-bind:key="listing.id">
+                      <!-- <option v-for="listing in filterBy(listings, search, 'title')" v-bind:key="listing.id">
                         <a v-bind:href="`/listings/${listing.id}`">{{ listing.title }} {{ listing.description }}/></a>
-                      </option>
+                      </option> -->
 
                       <button class="button-search" type="submit"><i class="pe-7s-search"></i></button>
                     </form>
@@ -96,8 +97,8 @@
                     <a href="#">Pages</a>
                     <ul>
                       <li><a href="/about">about us</a></li>
-                      <li><a href="my-account.html">my account</a></li>
-                      <li><a href="blog-details.html">blog</a></li>
+                      <!-- <li><a href="my-account.html">my account</a></li> -->
+                      <!-- <li><a href="blog-details.html">blog</a></li> -->
                       <li><a href="/login">login</a></li>
                       <li><a href="/signup">Signup</a></li>
                     </ul>
@@ -110,7 +111,7 @@
         </div>
       </div>
     </header>
-    <router-view />
+    <router-view v-bind:search="search" />
 
     <footer class="footer-area bg-gray pt-100 pb-70">
       <div class="container">
@@ -183,8 +184,8 @@ export default {
   methods: {
     submit: function() {
       console.log(this.search);
-      this.search = "";
-      this.$router.push("/listings?search=");
+      // this.search = "";
+      this.$router.push("/listings?search=" + this.search);
     },
     isLoggedIn: function() {
       return localStorage.getItem("jwt");

@@ -42,8 +42,8 @@
         </div>
       </div>
     </div>
-    Search:
-    <input v-model="search" type="text" list="listing-title" />
+    <!-- Search: -->
+    <!-- <input v-model="search" type="text" list="listing-title" /> -->
     <datalist class="listing-title-search">
       <!-- <option v-for="listing in listings" :key="listing.id">{{ listing.title }} {{ listing.description }}/></option> -->
     </datalist>
@@ -116,10 +116,11 @@ import axios from "axios";
 import Vue2Filters from "vue2-filters";
 export default {
   mixins: [Vue2Filters.mixin],
+  props: ["search"],
   data: function() {
     return {
       listings: [],
-      search: "",
+      // search: "",
     };
   },
   created: function() {

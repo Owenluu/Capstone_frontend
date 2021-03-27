@@ -16,7 +16,7 @@
       <div class="container">
         <div class="welcome-content text-center">
           <h5>Who Are We</h5>
-          <h1>SHEEP</h1>
+          <h1>The Sneaker Exchange</h1>
           <p>
             Based in Chicago, USA. Our goal is to provide sneakerheads with rare gems from around the sneaker world.
             Some sneakers have become increasingly rare over time and sometimes coming across a pair nowadays is

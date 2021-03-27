@@ -6,7 +6,8 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
-axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "https://cryptic-chamber-42692.herokuapp.com" : "/";
+axios.defaults.baseURL =
+  process.env.NODE_ENV === "development" ? "localhost:3000" : "https://cryptic-chamber-42692.herokuapp.com";
 
 var jwt = localStorage.getItem("jwt");
 if (jwt) {

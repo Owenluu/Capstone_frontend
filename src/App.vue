@@ -83,13 +83,13 @@
                     <a href="/listings">Discover</a>
                   </li>
                   <li>
-                    <a href="shop.html">Sell</a>
+                    <a href="/listings/new">Shop All</a>
                     <ul>
                       <li>
-                        <a href="#">shop layout</a>
+                        <a href="/map">Map</a>
                       </li>
                       <li>
-                        <a href="#">product details</a>
+                        <!-- <a href="#">product details</a> -->
                       </li>
                     </ul>
                   </li>
@@ -103,7 +103,7 @@
                       <li><a href="/signup">Signup</a></li>
                     </ul>
                   </li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <!-- <li><a href="contact.html">Contact</a></li> -->
                 </ul>
               </nav>
             </div>

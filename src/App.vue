@@ -9,7 +9,7 @@
               <div class="logo">
                 <a href="/">
                   <!-- <h1>The Sneaker Exchange</h1> -->
-                  <img alt="" src="assets/img/logo/logo.png" />
+                  <img alt="" src="assets/img/logo/logo1.png" />
                 </a>
               </div>
             </div>
@@ -120,11 +120,11 @@
             <div class="copyright mb-30">
               <div class="footer-logo">
                 <a href="/">
-                  <img alt="" src="assets/img/logo/logo.png" />
+                  <img alt="" src="assets/img/logo/logo1.png" />
                 </a>
               </div>
               <p>
-                &copy; 2021
+                &copy; 2021s
                 <b>Flone</b>
                 Made with
                 <i class="fa fa-heart"></i>

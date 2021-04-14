@@ -120,7 +120,7 @@
             <div class="copyright mb-30">
               <div class="footer-logo">
                 <a href="/">
-                  <img alt="" src="assets/img/logo/logo.png" />
+                  <img alt="" src="assets/img/logo/logo2.png" />
                 </a>
               </div>
               <p>

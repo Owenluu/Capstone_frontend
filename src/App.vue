@@ -125,12 +125,12 @@
               </div>
               <p>
                 &copy; 2021s
-                <b>Flone</b>
+                <b>Sneaker Exchange</b>
                 Made with
                 <i class="fa fa-heart"></i>
-                by
-                <a href="https://hasthemes.com/">HasThemes</a>
-                .
+                <!-- by -->
+                <!-- <a href="https://hasthemes.com/">HasThemes</a>
+                . -->
               </p>
             </div>
           </div>

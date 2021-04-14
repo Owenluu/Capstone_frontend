@@ -24,8 +24,9 @@
             history in our opinion. All our prices listed are in US Dollars. This app is meant for people who want to
             find an alternative to buying, selling, or trading sneakers and rare kicks. To use this app you first have
             to signup, and post a listing for sale and link up with people in your local community to make the sale!
-            Every listing must come with the original receipt for proof of authenticity.
           </p>
+          <p>Every listing must come with the original receipt for proof of authenticity.</p>
+          <p>Every listing must come with the original Box for proof of authenticity.</p>
         </div>
       </div>
     </div>

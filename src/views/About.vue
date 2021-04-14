@@ -30,8 +30,8 @@
         <div class="container">
           <div class="welcome-content text-center">
             <h1>RULES For Listings</h1>
-            <p>Every listing must come with the original receipt for proof of authenticity.</p>
-            <p>Every listing must come with the original Box for proof of authenticity.</p>
+            <p style="color:red">Every listing must come with the original receipt for proof of authenticity.</p>
+            <p style="color:red">Every listing must come with the original Box for proof of authenticity.</p>
           </div>
         </div>
       </div>

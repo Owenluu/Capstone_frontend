@@ -26,6 +26,7 @@
             to signup, and post a listing for sale and link up with people in your local community to make the sale!
           </p>
         </div>
+        <br />
         <div class="container">
           <div class="welcome-content text-center">
             <h1>RULES For Listings</h1>
